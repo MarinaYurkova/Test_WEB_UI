@@ -1,0 +1,112 @@
+{
+  "id": "90bc7f90-5e7b-48ea-8d1f-9e1e704c311e",
+  "version": "2.0",
+  "name": "RadioParadise",
+  "url": "https://radioparadise.com/player",
+  "tests": [{
+    "id": "42927a1d-c250-4bac-a5cc-1bc892e4386f",
+    "name": "start/stop playing music",
+    "commands": [{
+      "id": "c42b1c6a-b1fa-4e7d-b0cf-37a58c467b6a",
+      "comment": "",
+      "command": "open",
+      "target": "/player",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "82b5a3e6-2708-40ed-9dd6-0d1a40a17c47",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1296x1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2120ab36-ebb9-45ae-a9ba-ba87a9896e1d",
+      "comment": "",
+      "command": "click",
+      "target": "id=play-button",
+      "targets": [
+        ["id=play-button", "id"],
+        ["css=#play-button", "css:finder"],
+        ["xpath=//button[@id='play-button']", "xpath:attributes"],
+        ["xpath=//div[@id='controls']/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b46a9330-98f3-4b4c-b984-7ae85664c21b",
+      "comment": "",
+      "command": "click",
+      "target": "id=play-button",
+      "targets": [
+        ["id=play-button", "id"],
+        ["css=#play-button", "css:finder"],
+        ["xpath=//button[@id='play-button']", "xpath:attributes"],
+        ["xpath=//div[@id='controls']/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "6c9c206f-974b-4aeb-9c13-15b5c49ed165",
+    "name": "change stream quality to ultra",
+    "commands": [{
+      "id": "cbea4b74-0b93-4c51-be04-596aa3f11c26",
+      "comment": "",
+      "command": "open",
+      "target": "https://radioparadise.com/player",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a91ae679-d114-4a99-a998-4950cc5fa8d5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1296x1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "931f82bd-74ca-4332-acbd-3fb62c78f351",
+      "comment": "",
+      "command": "clickAt",
+      "target": "xpath=//button[@title='player settings']",
+      "targets": [
+        ["css=.cdk-focused", "css:finder"],
+        ["xpath=//div[@id='settings_button']/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b0e7e397-e4df-4785-8437-b9368143e511",
+      "comment": "",
+      "command": "clickAt",
+      "target": "xpath=//button[contains(@title,\"ultra\")]",
+      "targets": [
+        ["css=.cdk-focused", "css:finder"],
+        ["xpath=//mat-dialog-container[@id='mat-dialog-0']/app-dlg-player-settings/div/div[2]/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'low')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "61334d3c-bfc0-4123-934a-e092ca06b59b",
+      "comment": "",
+      "command": "clickAt",
+      "target": "xpath=//button[@title='player settings']",
+      "targets": [
+        ["css=.cdk-overlay-backdrop", "css:finder"],
+        ["xpath=//body/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "e1895915-5314-444d-b92d-86cd07ac5816",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["42927a1d-c250-4bac-a5cc-1bc892e4386f"]
+  }],
+  "urls": ["https://radioparadise.com/", "https://radioparadise.com/player"],
+  "plugins": []
+}
