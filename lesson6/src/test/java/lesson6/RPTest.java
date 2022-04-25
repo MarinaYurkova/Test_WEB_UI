@@ -44,16 +44,17 @@ public class RPTest {
         new MainPage(driver)
                 .playStop()
                 .rpQuality()
-                .rpViewSongInfo()
-                .rpViewWikiInfo();
+                .rpViewSongInfo() //не понимаю, почему падает
+                .rpViewWikiInfo(); //та же фигня
 
-        Assertions.assertAll(
+       Assertions.assertAll(
                 () -> assertTrue(driver.findElement(By.id("play-button")).isDisplayed()),
                 () -> assertTrue(driver.findElement(By.xpath("//button[contains(@title," +
                         "\"ultra\")]")).isDisplayed()),
                 () -> assertThat(songs).doesNotContainNull());
-    }
 
+    }
+    
     @AfterEach
     void tearDown() {
         driver.quit();
